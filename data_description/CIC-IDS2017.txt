@@ -1,0 +1,15 @@
+"BENIGN"      1818470 
+"Bot      1573    
+"Brute Force"      1206    
+"DDoS"      102421  
+"DoS GoldenEye"      8234    
+"DoS Hulk"      184858  
+"DoS Slowhttptest"      4399    
+"DoS slowloris"      4637    
+"FTP-Patator"      6350    
+"Heartbleed"      9       
+"Infiltration"     29      
+"PortScan"     127144  
+"SSH-Patator"     4718    
+"Sql Injection"     17      
+"XSS"     522

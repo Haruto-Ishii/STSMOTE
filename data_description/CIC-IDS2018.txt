@@ -1,0 +1,15 @@
+"Benign"     4845864
+"Bot"     228953
+"Brute Force -Web"     489
+"Brute Force -XSS"     184
+"DDOS attack-HOIC"     548809
+"DDOS attack-LOIC-UDP"     1384
+"DDoS attacks-LOIC-HTTP"     460953
+"DoS attacks-GoldenEye"     33206
+"DoS attacks-Hulk"     369530
+"DoS attacks-SlowHTTPTest"     111912
+"DoS attacks-Slowloris"    8792
+"FTP-BruteForce"    154688
+"Infilteration"    129547
+"SQL Injection"    70
+"SSH-Bruteforce"    150071

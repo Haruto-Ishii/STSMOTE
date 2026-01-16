@@ -1,0 +1,89 @@
+dataset: CIC-IDS2017
+random_state: 0
+seed_undersample_states:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+seed_sizes:
+  - 2
+dataset_configs:
+  UNSW-NB15:
+    data_dir: ./parquet/UNSW-NB15
+    task: multiclass
+    oversample_num: 5000
+    minority_class_name: Shellcode
+    sampling_map:
+      Analysis: 0
+      Backdoor: 0
+      DoS: 5000
+      Exploits: 5000
+      Fuzzers: 5000
+      Generic: 5000
+      Normal: 5000
+      Reconnaissance: 5000
+      Shellcode: 1209
+      Worms: 0
+  CIC-IDS2017:
+    data_dir: ./parquet/CIC-IDS2017
+    task: multiclass
+    minority_class_name: Bot
+    oversample_num: 4000
+    sampling_map:
+      BENIGN: 4000
+      Bot: 1573
+      Brute Force: 0
+      DDoS: 4000
+      DoS GoldenEye: 4000
+      DoS Hulk: 4000
+      DoS Slowhttptest: 4000
+      DoS slowloris: 4000
+      FTP-Patator: 4000
+      Heartbleed: 0
+      Infiltration: 0
+      PortScan: 4000
+      SSH-Patator: 4000
+      Sql Injection: 0
+      XSS: 0
+  CIC-IDS2018:
+    data_dir: ./parquet/CIC-IDS2018
+    task: multiclass
+    minority_class_name: SQL Injection
+    oversample_num: 5000
+    sampling_map:
+      Benign: 5000
+      Bot: 5000
+      Brute Force -Web: 0
+      Brute Force -XSS: 0
+      DDOS attack-HOIC: 5000
+      DDOS attack-LOIC-UDP: 0
+      DDoS attacks-LOIC-HTTP: 5000
+      DoS attacks-GoldenEye: 5000
+      DoS attacks-Hulk: 5000
+      DoS attacks-SlowHTTPTest: 5000
+      DoS attacks-Slowloris: 5000
+      FTP-BruteForce: 5000
+      Infilteration: 5000
+      SSH-Bruteforce: 5000
+      SQL Injection: 70

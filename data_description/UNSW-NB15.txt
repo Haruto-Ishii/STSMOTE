@@ -1,0 +1,10 @@
+"Analysis"         2142    
+"Backdoor"         1863    
+"DoS"          13082   
+"Exploits"          35620   
+"Fuzzers"          19397   
+"Generic"          172385  
+"Normal"          1775003 
+"Reconnaissance"          11189   
+"Shellcode"         1209    
+"Worms"          139  

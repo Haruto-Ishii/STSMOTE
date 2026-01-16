@@ -54,4 +54,4 @@ If you wish to run the experiments from scratch:
 2. Run `augmentation.py` as described above.
 
 **⚠️ Note on Reproducibility:**
-While we strive for reproducibility, please note that **TabM** results may not perfectly match the values reported in the paper due to the inherent non-determinism of the model's training process on different environments.
+While we strive for reproducibility by fixing random seeds, please note that experimental results may vary slightly depending on the execution environment (e.g., hardware architecture, OS, and library versions). Therefore, we cannot guarantee an exact match with the values reported in the paper.

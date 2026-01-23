@@ -1,4 +1,4 @@
-dataset: CIC-IDS2017
+dataset: CIC-IDS2018
 random_state: 0
 seed_undersample_states:
   - 0
@@ -27,7 +27,7 @@ seed_undersample_states:
   - 23
   - 24
 seed_sizes:
-  - 2
+  - 5
 dataset_configs:
   UNSW-NB15:
     data_dir: ./parquet/UNSW-NB15

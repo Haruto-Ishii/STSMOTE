@@ -7,6 +7,7 @@ from synthesis_method.CTGAN.main import main as ctgan_main
 from synthesis_method.TVAE.main import main as tvae_main
 from synthesis_method.TabSyn.tabsyn.main import main as tabsyn_main
 from proposed_method.STSMOTE import main as stsmote_main
+from proposed_method.STSMOTE_plus import main as stsmote_plus_main
 
 def run_augmentation(method_name, X_minority, y_minority, X_majority, y_majority, num_to_generate, info, random_state):
     if method_name == 'SMOTE':
@@ -25,6 +26,8 @@ def run_augmentation(method_name, X_minority, y_minority, X_majority, y_majority
         X_synthetic, y_synthetic = tabsyn_main(X_minority, y_minority, X_majority, y_majority, num_to_generate, info, random_state)
     elif method_name == 'STSMOTE':
         X_synthetic, y_synthetic = stsmote_main(X_minority, y_minority, X_majority, y_majority, num_to_generate, info, random_state)
+    elif method_name == 'STSMOTE_plus':
+        X_synthetic, y_synthetic = stsmote_plus_main(X_minority, y_minority, X_majority, y_majority, num_to_generate, info, random_state)
     else:
         raise ValueError(f"Unknown method: {method_name}")
     

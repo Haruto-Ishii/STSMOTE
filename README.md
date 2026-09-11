@@ -1,6 +1,10 @@
-# STSMOTE: Official Implementation
+# STSMOTE & STSMOTE-plus: Official Implementation
 
-This repository contains the implementation of **STSMOTE**, a controllable data augmentation method for zero-day attack detection in NIDS.
+**📢 [Update]**
+We have added the code for our newly proposed method, **STSMOTE-plus**, which is an extended version of our previous work. 
+*(Note: The experimental data and results specific to STSMOTE-plus are currently in preparation and not yet included in this repository.)*
+
+This repository contains the implementation of **STSMOTE** and **STSMOTE-plus**, controllable data augmentation methods for zero-day attack detection in NIDS.
 
 ## 📢 Note to Reviewers
 **Please check the `results` folder.**
@@ -32,6 +36,14 @@ The CIC-IDS2018 dataset used in this work is sourced from:
 
 ## 3. Usage & Reproducibility
 
+### Switching Between Methods
+You can easily switch between the original STSMOTE and the extended STSMOTE-plus by modifying the configuration in the script:
+
+1. Open `augmentation.py`.
+2. Change the `PROPOSED_METHOD` variable to your desired method:
+   - For **STSMOTE**: `PROPOSED_METHOD = "STSMOTE"`
+   - For **STSMOTE-plus**: `PROPOSED_METHOD = "STSMOTE_plus"`
+
 ### Viewing Analysis Reports (Using Cached Results)
 The experimental results are already stored in the `experiment_results_cache` directory. To generate the final analysis reports (e.g., Average F1-Scores, Statistical Tests) without re-running the training process:
 
@@ -51,7 +63,8 @@ The experimental results are already stored in the `experiment_results_cache` di
 If you wish to run the experiments from scratch:
 
 1. **Delete** the relevant files (or the entire folder) in `experiment_results_cache`.
-2. Run `augmentation.py` as described above.
+2. Ensure you have selected the desired method (`STSMOTE` or `STSMOTE_plus`) in `augmentation.py`.
+3. Run `augmentation.py` as described above.
 
 **⚠️ Note on Reproducibility:**
 While we strive for reproducibility by fixing random seeds, please note that experimental results may vary slightly depending on the execution environment (e.g., hardware architecture, OS, and library versions). Therefore, we cannot guarantee an exact match with the values reported in the paper.

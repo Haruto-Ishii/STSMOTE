@@ -15,7 +15,7 @@ from utils.cache_manager import ExperimentCacheManager
 from utils.analysis import run_comparative_analysis
 
 #!
-PROPOSED_METHOD = "STSMOTE"
+PROPOSED_METHOD = "STSMOTE_plus"
 METHODS_TO_COMPARE = ["Baseline", "SMOTE", "RO", "ADASYN", "CTGAN", "TVAE", "BorderlineSMOTE", "TabSyn"]
 METHODS_TO_RUN = METHODS_TO_COMPARE + [PROPOSED_METHOD]
 SKIP_EXISTING = True

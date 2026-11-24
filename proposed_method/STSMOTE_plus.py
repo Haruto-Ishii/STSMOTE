@@ -8,7 +8,6 @@ from sklearn.preprocessing import MinMaxScaler, QuantileTransformer, StandardSca
 def generate_noise_orthogonal_vectorized(vec_axis, dim, magnitudes):
 
     n_samples = len(magnitudes)
-    # 標準正規分布 (N, dim)
     rand_vecs = np.random.standard_normal((n_samples, dim))
     
     norm_axis = np.linalg.norm(vec_axis)
@@ -28,12 +27,6 @@ def generate_noise_orthogonal_vectorized(vec_axis, dim, magnitudes):
 
 # --- Main Augmentation Function ---
 def main(X_minority, y_minority, X_majority, y_majority, num_to_generate, info, random_state):
-    """
-    Safe-Tube SMOTE (Proposed Method)
-    
-    数値特徴量空間で幾何学的な安全領域(Tube)を計算してノイズを加え、
-    カテゴリカル特徴量は近い方の親データから継承する。
-    """
     rng = np.random.default_rng(random_state)
     
     num_numerical_features = info['num_numerical_features']
@@ -76,7 +69,6 @@ def main(X_minority, y_minority, X_majority, y_majority, num_to_generate, info, 
     generated_num_data = []
     generated_cat_data = []
     
-    # --- Helper: 球状生成 (Sphere) ---
     def generate_sphere(center_idx, n_gen):
         if n_gen <= 0: return
         

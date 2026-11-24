@@ -5,15 +5,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import wilcoxon
 
-# モデルリスト
 MODELS = ["CatBoost", "XGBoost", "LightGBM", "TabM"]
 
-# 基本指標と向きの定義
 BASE_METRICS = {
     "f1_minority": True,
 }
 
-# 自動展開
 METRIC_DIRECTIONS = {}
 for model in MODELS:
     for metric, direction in BASE_METRICS.items():
@@ -26,13 +23,11 @@ def _perform_pairwise_wilcoxon_raw(metric_name, pivot_df, proposed_method, thres
 
     results = []
     
-    # 比較対象の手法リスト
     targets = [c for c in pivot_df.columns if c != proposed_method]
     direction = METRIC_DIRECTIONS[metric_name]
     
     for method in targets:
         try:
-            # 提案手法と対象手法のデータペア
             x = pivot_df[proposed_method]
             y = pivot_df[method]
             
